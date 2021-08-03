@@ -19,6 +19,12 @@ ul li {
   margin-bottom: 0px;
 }
 
+mark {
+  background: #f56457;
+  color: #fff;
+  border-radius: 50%;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   color: #fff;
@@ -36,10 +42,13 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   background: #f56457;
   padding: 12px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
   align-items: center;
 }
 
-#div-btn {
+#div-botoes {
   display: flex;
   justify-content: flex-end;
 }
@@ -72,7 +81,7 @@ nav .logo {
   position: absolute;
   right: 0px;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 46px;
   display: none;
 }
 
@@ -101,16 +110,15 @@ nav .logo {
 }
 
 .botao-menu {
+  font-size: 2.5rem;
   background: transparent;
   color: #fff;
   border: none;
-  font-size: 2.5rem;
   display: none;
   cursor: pointer;
 }
 
-/* ---------------------------------------------------------- */
-
+/* INTRODUÇÃO */
 .introducao {
   grid-column: 1 / 6;
   display: grid;
@@ -128,7 +136,6 @@ nav .logo {
 #bloco-introducao_direita {
   background: url("../images/fundo.jpg") no-repeat center center;
   background-size: 100%;
-  background-color: #eee;
   height: 80vh;
 }
 
@@ -137,18 +144,17 @@ nav .logo {
   font-size: 2rem;
   text-align: center;
   padding: 30px;
-  line-height: 42px;
 }
 
 .botao-comprar {
+  font-size: 1.2rem;
+  font-weight: bold;
   padding: 15px 32px;
   color: #fff;
   background: #f56457;
   border: 1px solid #f56457;
   border-radius: 4px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 1.25px;
   cursor: pointer;
 }
 
@@ -161,24 +167,22 @@ nav .logo {
   transition: all 0.75s ease 0s;
 }
 
-/* ---------------------------------------------------------- */
-
+/* O QUE TEMOS */
 .bloco-imagens {
   grid-column: 1 / 6;
-  padding: 80px 20px 20px 0px;
+  padding: 100px 10px;
   text-align: center;
 }
 
 .bloco-imagens h2 {
-  font-size: 2.2rem;
+  font-size: 2.25rem;
 }
 
 .itens-casa {
   margin-left: 25px;
 }
 
-/* ---------------------------------------------------------- */
-
+/* INFORMAÇÕES */
 .bloco-informacoes {
   grid-column: 1 / 6;
   padding: 50px;
@@ -186,7 +190,7 @@ nav .logo {
 }
 
 .bloco-informacoes h4 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   margin-bottom: 20px;
 }
 
@@ -197,7 +201,7 @@ nav .logo {
 
 .bloco-informacoes h6 {
   font-size: 1rem;
-  margin-top: 20px 0px;
+  margin-top: 20px auto;
 }
 
 .itens-redes {
@@ -205,8 +209,7 @@ nav .logo {
   margin-left: 15px;
 }
 
-/* ---------------------------------------------------------- */
-
+/* MODELOS */
 .bloco-modelos {
   grid-column: 1 / 6;
   text-align: center;
@@ -218,9 +221,8 @@ nav .logo {
 }
 
 .bloco-modelos h2 {
-  font-weight: normal;
   letter-spacing: 2px;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
 }
 
 .itens-modelos {
@@ -230,8 +232,7 @@ nav .logo {
   border-radius: 4px;
 }
 
-/* ---------------------------------------------------------- */
-
+/* SOBRE */
 .bloco-diferencial {
   grid-column: 1 / 6;
   background: #eee;
@@ -246,7 +247,7 @@ nav .logo {
 .conteudo-carrossel h2 {
   font-weight: normal;
   letter-spacing: 2px;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   margin: 100px 0px 30px 0px;
 }
 
@@ -260,12 +261,11 @@ nav .logo {
 
 #campo-frases {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* ---------------------------------------------------------- */
-
+/* CARROSSEL */
 .bloco-carrossel {
   grid-column: 1 / 5;
   text-align: center;
@@ -287,8 +287,7 @@ nav .logo {
   height: 550px;
 }
 
-/* ---------------------------------------------------------- */
-
+/* CONTATO */
 .bloco-contato {
   grid-column: 1 / 6;
   background: #f56457;
@@ -299,6 +298,7 @@ nav .logo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 20px;
+  align-items: center;
 }
 
 .contato-texto,
@@ -340,8 +340,7 @@ nav .logo {
   border-radius: 4px;
 }
 
-/* ---------------------------------------------------------- */
-
+/* RODAPÉ */
 .bloco-rodape {
   grid-column: 1 / 6;
   background: #eee;
@@ -352,16 +351,12 @@ nav .logo {
   grid-template-columns: repeat(4, 1fr);
   padding: 20px 0px 20px 100px;
   margin-top: 30px;
-  text-align: center;
 }
 
-.conteudo-rodape p {
-  text-align: justify;
-  line-height: 35px;
-}
-
-.conteudo-rodape a {
+.conteudo-rodape li {
   font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 15px;
 }
 
 .conteudo-rodape a:hover {
@@ -369,23 +364,15 @@ nav .logo {
   color: #f56457;
 }
 
-/* ---------------------------------------------------------- */
-
+/* RESPONSIVO */
 @media (max-width: 1150px) {
-  #bloco-introducao_esquerda {
-    height: 80vh;
-    padding-top: 100px;
-    border: none;
-  }
-
   .conteudo-introducao {
     font-size: 1.4rem;
     text-align: center;
   }
 
   .conteudo-imagens {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0 auto;
   }
 
   .itens-casa {
@@ -398,28 +385,15 @@ nav .logo {
 
   .conteudo-modelos {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    overflow-x: scroll;
+    width: 600px;
+    margin: 0 auto;
   }
 
   .itens-modelos {
-    margin: 20px;
+    margin: 15px;
   }
-
-  #campo-frases {
-    font-size: 1.2rem;
-  }
-
-  .imagens-carrossel {
-    width: 600px;
-    height: 250px;
-  }
-
-  .icone-carrossel {
-    font-size: 2.5rem;
-  }
-
+  
   .contato-texto,
   .contato-botao {
     display: flex;
@@ -438,13 +412,7 @@ nav .logo {
     padding: 20px 0px;
   }
 
-  .bloco-rodape {
-    grid-column: 1 / 6;
-    background: #eee;
-  }
-
   .conteudo-rodape {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding-left: 50px;
     text-align: center;
@@ -456,8 +424,7 @@ nav .logo {
   }
 }
 
-/* ---------------------------------------------------------- */
-
+/* RESPONSIVO */
 @media (max-width: 960px) {
   .menu-visivel {
     display: none;
@@ -483,7 +450,7 @@ nav .logo {
     display: inline;
   }
 
-  #div-btn::after {
+  #div-botoes::after {
     content: "";
     width: 0;
     height: 0;
@@ -496,31 +463,19 @@ nav .logo {
   }
 }
 
-/* ---------------------------------------------------------- */
+/* RESPONSIVO CELULAR */
 
-@media (max-width: 820px) {
+@media (max-width: 760px) {
   .introducao {
     display: grid;
     grid-template-columns: 1fr;
   }
-
-  .bloco-imagens h2 {
-    font-size: 1.75rem;
-  }
-
-  .botao-drop {
-    display: none;
-  }
-
+  
   #bloco-introducao_esquerda {
     padding-top: 150px;
   }
 
   .bloco-carrossel {
-    display: none;
-  }
-
-  .conteudo-rodape p {
-    text-align: left;
+    width: 90%;
   }
 }

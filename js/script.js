@@ -152,3 +152,5 @@ function apareceMenu() {
     })
 }
 apareceMenu();
+
+alert(window.innerWidth);
